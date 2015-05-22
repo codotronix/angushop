@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AnguShop</title>
+	<script src="js/angular.min.js"></script>
+   	<script src="js/angular-route.min.js"></script>
+   	<script src="js/angScript.js"></script>
+</head>
+<body data-ng-app="mainApp" data-ng-controller="mainController">
+	<header>
+		<ul>
+			<li data-ng-repeat="menu in mainMenuList">
+				<a href="#{{menu | lowercase}}">
+					{{menu}}
+				</a>
+			</li>
+		</ul>
+	</header>
+	<div ng-view></div>
+  	<script type="text/ng-template" id="template.html">
+     	<h2> Add Student </h2>
+     	{{message}}
+  	</script>
+</body>
+</html>
