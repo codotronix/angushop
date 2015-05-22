@@ -133,7 +133,7 @@ header .description {
 	color: #261DB3;
 	border: 1px solid #261DB3;
 	padding: 5px 15px;
-	margin-left: 5px;
+	margin: 0 0 5px 5px;
 }
 
 .secPagination ul li:hover {
