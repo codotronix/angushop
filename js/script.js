@@ -52,7 +52,7 @@ var lastPageNum;
 
 /************************* ALL EVENTS ****************************/
 	//mobile main menu view toggle
-	$('#headSharingIconsPanel').on('click', '.showHideMainMenu', function (ev) {
+	$('header').on('click', '.showHideMainMenu', function (ev) {
 		ev.stopPropagation();
 		$('#headNav ul').toggle(500);
 	});
