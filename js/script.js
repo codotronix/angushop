@@ -22,7 +22,7 @@ mainApp.config(['$routeProvider',
             $routeProvider.
                when('/:name', {
                   templateUrl: 'template.html',
-                  controller: 'manuController'
+                  controller: 'menuController'
                })
                .when('/', {
                		redirectTo: '/deals'
@@ -32,7 +32,7 @@ mainApp.config(['$routeProvider',
                });
          }]);
 
-		mainApp.controller('manuController', function($scope, $route, $routeParams) {
+		mainApp.controller('menuController', function($scope, $route, $routeParams) {
 			$route.current.templateUrl = '/' + $routeParams.name + ".html";
 			var pageName = $routeParams.name;
 			var arrayOfSubPages = $scope.mainMenuObj[pageName];
