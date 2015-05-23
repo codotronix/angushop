@@ -272,7 +272,7 @@ footer {
 
 @media (max-width:767px) {
 	#logoDiv {
-		/*display: block;*/
+		margin-right: 0;
 	}
 	
 	header .description {
