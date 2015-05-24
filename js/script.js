@@ -49,6 +49,9 @@ $(function(){
 	'use strict';
 
 var lastPageNum;
+var maxPgBtnShown = 5;
+var halfLength = Math.floor(maxPgBtnShown/2);
+var maxBtnEven = (maxPgBtnShown%2==0);
 
 /************************* ALL EVENTS ****************************/
 	//mobile main menu view toggle
@@ -112,7 +115,6 @@ var lastPageNum;
 		else {
 			$('.jcarousel-control-next').trigger('click');
 		}
-
 		setTimeout(autoRightScroll, 2000);
 	}
 
@@ -183,6 +185,33 @@ var lastPageNum;
 		else {
 			$('.left-arrow').show();
 			$('.right-arrow').show();
+		}
+
+		//show only maxPgBtnShown number of pagination buttons on the page 
+		//at a time
+		//check if TotalPages > maxPgBtnShown
+		
+		if(lastPageNum > maxPgBtnShown) {
+			var start, end;
+			if (pageNum <= halfLength) {
+				start = 1;
+				end = maxPgBtnShown;
+			} 
+			else if ((lastPageNum - pageNum) < maxPgBtnShown) {
+				start = lastPageNum - (maxPgBtnShown - 1);
+				end = lastPageNum;
+			}
+			else {
+				start = pageNum - halfLength;
+				end = maxBtnEven ? (pageNum + (halfLength - 1)) : (pageNum + halfLength);			
+			}
+
+			//show only the buttons from start to end
+			$('li[data-page-num]').hide();
+
+			for(var i= start; i<=end; i++) {
+				$('li[data-page-num="'+i+'"]').show();
+			}			
 		}
 	}
 
