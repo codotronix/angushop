@@ -259,6 +259,8 @@ $(function(){
 	//////////////////////////////////////////////////////////////////////
 
 	//resize window to fix responsive carousel data cutting issue
-	$(window).resize();
+	window.setTimeout(function(){
+		$(window).resize();
+	},4000);
 });
 
