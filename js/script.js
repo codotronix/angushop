@@ -1,3 +1,4 @@
+/* PROPERTY OF SUMAN BARICK */
 //this one global object to make the handshake between
 //angular and jquery smooth and to pass around objects
 var gAppObj = {};
@@ -258,7 +259,7 @@ $(function(){
 	}
 	//////////////////////////////////////////////////////////////////////
 
-	//resize window to fix responsive carousel data cutting issue
+	//force resize window to fix responsive carousel data cutting issue
 	window.setTimeout(function(){
 		$(window).resize();
 	},4000);
