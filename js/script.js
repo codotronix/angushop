@@ -48,12 +48,12 @@ mainApp.config(['$routeProvider',
 $(function(){
 	'use strict';
 
-var lastPageNum;
-var maxPgBtnShown = 5;
-var halfLength = Math.floor(maxPgBtnShown/2);
-var maxBtnEven = (maxPgBtnShown%2==0);
+	var lastPageNum;
+	var maxPgBtnShown = 5;
+	var halfLength = Math.floor(maxPgBtnShown/2);
+	var maxBtnEven = (maxPgBtnShown%2==0);
 
-/************************* ALL EVENTS ****************************/
+	/************************* ALL EVENTS ****************************/
 	//mobile main menu view toggle
 	$('header').on('click', '.showHideMainMenu', function (ev) {
 		ev.stopPropagation();
@@ -100,9 +100,9 @@ var maxBtnEven = (maxPgBtnShown%2==0);
 		//console.log('going to ' + (currentPageNum+1))
 	});
 
-/////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////////////
 
-/******************* top Carousel auto rotate ********************/
+	/******************* top Carousel auto rotate ********************/
 	var leftArrowClicked = false;
 	$('.jcarousel-control-prev').click(function () {
 		leftArrowClicked = true;
@@ -119,9 +119,9 @@ var maxBtnEven = (maxPgBtnShown%2==0);
 	}
 
 	autoRightScroll();
-///////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////
 
-/**************** ALL FUNCTIONS DEFINED BELOW **********************/	
+	/**************** ALL FUNCTIONS DEFINED BELOW **********************/	
 
 	/* initPage function will take the pageId and make the page for us including
  	pagination and then loading the content of the 1st page
@@ -256,6 +256,9 @@ var maxBtnEven = (maxPgBtnShown%2==0);
 
 		$('.icon-rupee').addClass('fa fa-inr');
 	}
-//////////////////////////////////////////////////////////////////////////
+	//////////////////////////////////////////////////////////////////////
+
+	//resize window to fix responsive carousel data cutting issue
+	$(window).resize();
 });
 
