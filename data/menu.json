@@ -19,5 +19,10 @@
 			[
 			"data/electronics/testElectronics2.json",
 			"data/electronics/testElectronics.json"
+			],
+	
+	"other":
+			[
+			"data/data_May252015-043539pm.json"
 			]
 }
