@@ -21,8 +21,16 @@
 	
 	"electronics":
 			[
-			"data/electronics/testElectronics2.json",
-			"data/electronics/testElectronics.json"
+			"data/electronics/data_May312015-112857am_1.json",
+			"data/electronics/data_May312015-112857am_2.json",
+			"data/electronics/data_May312015-112857am_3.json",
+			"data/electronics/data_May312015-112857am_4.json",
+			"data/electronics/data_May312015-112857am_5.json",
+			"data/electronics/data_May312015-112857am_6.json",
+			"data/electronics/data_May312015-112857am_7.json",
+			"data/electronics/data_May312015-112857am_8.json",
+			"data/electronics/data_May312015-112857am_9.json",
+			"data/electronics/data_May312015-112857am_10.json"
 			],
 	
 	"other":
