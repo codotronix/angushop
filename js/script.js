@@ -201,8 +201,6 @@ $(function(){
 		//show only maxPgBtnShown number of pagination buttons on the page 
 		//at a time
 		//check if TotalPages > maxPgBtnShown
-		console.log('lastPageNum='+lastPageNum);
-		console.log('maxPgBtnShown='+maxPgBtnShown);
 		if(lastPageNum > maxPgBtnShown) {
 			var start, end;
 			if (pageNum <= halfLength) {				
